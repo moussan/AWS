@@ -42,7 +42,7 @@ C. “Container nerd” path (for learning modern AWS)
 
 **This is very cool, very educational, and very “2025,” but not the cheapest.**
 
----
+
 I think we start with A and design it so you can evolve to B without throwing everything away.
 ---
 
@@ -105,12 +105,12 @@ Later, if you want strict isolation, you spin up separate EC2s in the same patte
 Phase 6 – Make it scale (the fun part)
 Right now everything is on 1 EC2. To scale horizontally we need to make WP stateless:
 
-1. Bake or script install so new EC2s can come up ready.
-2. Move /wp-content off the instance:
-  - Easiest AWS way: mount EFS on each instance and point WordPress uploads there.
-  - Or use S3 offload plugin (a bit more WP-y).
-3. Put the EC2s in an Auto Scaling Group behind the ALB.
-4. Add target tracking scaling policy (scale out when CPU > 50%).
+- Bake or script install so new EC2s can come up ready.
+- Move /wp-content off the instance:
+-- Easiest AWS way: mount EFS on each instance and point WordPress uploads there.
+-- Or use S3 offload plugin (a bit more WP-y).
+- Put the EC2s in an Auto Scaling Group behind the ALB.
+- Add target tracking scaling policy (scale out when CPU > 50%).
 
 Now when traffic spikes, new WP instances come up, mount EFS, connect to the same RDS, and serve traffic.
 
