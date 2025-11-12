@@ -1,6 +1,6 @@
-*I don’t just want to run WordPress. I want to understand how to design WordPress on AWS like a grownup.*
+#I don’t just want to run WordPress. I want to understand how to design WordPress on AWS like a grownup.
 
-**0. Reality check (money + free tier)**
+##0. Reality check (money + free tier)
 
 You’ve got:
 
@@ -11,7 +11,7 @@ You’ve got:
 **So we should start simple and secure, and only add the “fancy autoscaling” once the basics are solid — because the fancier patterns (ALB + Auto Scaling + EFS + RDS/Aurora) start to cost.**
 
 
-**1. The 3 possible endgames**
+##1. The 3 possible endgames
 
 *A. “Starter, but proper AWS” (cheapest)*
   1× EC2 in a VPC (WordPress + PHP + nginx/Apache)
