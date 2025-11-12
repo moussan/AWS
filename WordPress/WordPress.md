@@ -48,7 +48,7 @@ I think we start with A and design it so you can evolve to B without throwing ev
 
 ### 2. Phase-by-phase plan
 
-==Phase 1 – Secure the account (15–30 min)==
+== Phase 1 – Secure the account (15–30 min) ==
 This is boring but absolutely part of “architecting in AWS.”
 - Turn on MFA on the root user.
 - Create an admin IAM user/role and stop using root.
