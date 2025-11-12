@@ -107,8 +107,8 @@ Right now everything is on 1 EC2. To scale horizontally we need to make WP state
 
 - Bake or script install so new EC2s can come up ready.
 - Move /wp-content off the instance:
--- Easiest AWS way: mount EFS on each instance and point WordPress uploads there.
--- Or use S3 offload plugin (a bit more WP-y).
++ Easiest AWS way: mount EFS on each instance and point WordPress uploads there.
++ Or use S3 offload plugin (a bit more WP-y).
 - Put the EC2s in an Auto Scaling Group behind the ALB.
 - Add target tracking scaling policy (scale out when CPU > 50%).
 
